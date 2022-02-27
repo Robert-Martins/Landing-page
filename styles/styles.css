@@ -273,3 +273,65 @@ html,body{
     box-sizing: border-box;
     padding: 16px 0;
 }
+
+@media screen and (max-width: 1312px) {
+
+    .box-container{
+        margin: 24px 0;
+    }
+
+    .product-box{
+        float: none;
+        display: inline-block;
+        margin: 16px 16px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    
+    .form-container{
+        text-align: center;
+        height: 657px;
+    }
+    
+    .slogan-container{
+        float: none;
+        display: inline-block;
+        text-align: initial;
+        margin-left: 0;
+    }
+
+    .form{
+        float: none;
+        display: inline-block;
+        text-align: initial;
+        height: 400px;
+        margin: 20px 20px;
+    }
+
+    .testimonial{
+        padding: 16px 48px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    
+    .footer{
+        padding-top: 16px;
+    }
+    
+    .company-contact, .company-details {
+        float: none;
+        margin: 32px 24px;
+    }
+
+    .copyright{
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 612px) {
+    .testimonial{
+        padding: 16px 24px;
+    }
+}
