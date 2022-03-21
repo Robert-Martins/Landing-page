@@ -58,11 +58,13 @@ html,body{
 
 .header-menu a{
     margin: 0 12px;
-}
-
-.header-menu a{
     text-decoration: none;
     color: #ff9200;
+}
+
+.header-menu a:hover{
+    color:rgba(255, 98, 0, 0.96);
+    transition: 0.2s;
 }
 
 .form-container{
@@ -84,6 +86,9 @@ html,body{
     width: 280px;
     height: 140px;
     border-radius: 10px;
+    animation: slogan-transition-animation;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
 }
 
 .slogan-container p{
@@ -107,7 +112,7 @@ html,body{
     margin: 12px 0px;
 }
 
-.form-input input[type=text], input[type=text]:focus, input[type=text]:hover{
+.form-input input[type=text]{
     display: block;
     outline: none;
     border: none;
@@ -118,7 +123,13 @@ html,body{
     width: 280px;
 }
 
-.form-input input[type=submit], input[type=submit]:focus, input[type=submit]:hover{
+input[type=text]:focus, input[type=text]:hover{
+    border-left: #ff9200 2px solid;
+    border-bottom: #ff9200 1px solid;
+    transition: 1s;
+}
+
+.form-input input[type=submit]{
     display: block;
     outline: none;
     border: none;
@@ -128,6 +139,13 @@ html,body{
     padding: 12px 48px;
     margin: 32px auto;
     cursor:pointer;
+}
+
+input[type=submit]:focus, input[type=submit]:hover{
+    color: #ff6200;
+    background-color: white;
+    border: #ff6200 1px solid;
+    transition: 0.5s;
 }
 
 .container{
@@ -156,6 +174,12 @@ html,body{
     margin: 0 16px;
     position: relative;
     box-shadow: 0 0 10px 0 rgb(255 98 0 / 16%);
+    transition: background-color 0.6s;
+}
+
+.product-box:hover{
+    color: white;
+    background-color: #ff6200;
 }
 
 .product-box p{
@@ -254,7 +278,12 @@ html,body{
     margin-bottom: 4px;
 }
 
-.company-details button, button:focus, button:hover{
+.company-details a:hover, .company-details a:focus, .company-details button:focus, .company-details button:hover{
+    color: black;
+    transition: 0.4s;
+}
+
+.company-details button{
     display: block;
     outline: none;
     border: none;
@@ -334,4 +363,18 @@ html,body{
     .testimonial{
         padding: 16px 24px;
     }
+}
+
+@keyframes slogan-transition-animation {
+
+    0%{
+        background-color: #ff9200;
+    }
+    50%{
+        background-color: #ff6200;
+    }
+    100%{
+        background-color: #ff9200;
+    }
+    
 }
