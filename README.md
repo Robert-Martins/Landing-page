@@ -48,6 +48,38 @@ O desenvolvimento do projeto tem como objetivo estudar e desenvolver o domínio 
   
 </details>
 
+- Modal de Termos de Uso e Políticas : A modal exibe os termos de uso do site, pode ser visualizada no rodapé do site
+
+<details><summary>GIF de exibição</summary>
+
+![policies-modal-exhibition](https://user-images.githubusercontent.com/78915072/165002003-4b1182d3-4122-4315-bdeb-a2c1daca21aa.gif)
+
+</details>
+
+- Aba 'Blog' : A aba lista blogs do site, acessível pelo menu superior
+
+<details><summary>GIF de exibição</summary>
+
+  ![blog-tab-exhibition](https://user-images.githubusercontent.com/78915072/165001789-6f9549f7-4b77-4ea9-8b3b-03520c39ec0f.gif)
+
+</details>
+
+- Slider de posts do blog : Slider com animação de scroll horizontal, opções navegáveis atráves de setas ou bullets
+
+<details><summary>GIF de exibição</summary>
+
+  ![blog-slider-exhibition](https://user-images.githubusercontent.com/78915072/165001797-65c5b0d2-5fe2-4f01-8af7-23e001b64956.gif)
+
+</details>
+
+- Scroll automático pelo menu superior : Ao selecionar algumas opções no menu superior o scroll é animado até a seção específica do site
+
+<details><summary>GIF de exibição</summary>
+
+  ![navigation-exhibition](https://user-images.githubusercontent.com/78915072/165001818-e1a48216-ab33-4bc1-aaeb-97bd7a692e26.gif)
+
+</details>
+
 <br>
 
 ### Tecnologias utilizadas no desenvolvimento do projeto
@@ -74,13 +106,11 @@ Claro, toda participação é bem vinda.
 
 Próximos passos:
 
-- Implementar aba 'Blog', acessável pelo menu superior
-
 - Implementar disparo de e-mail ao preencher o formulário
 
-- Implementar menu responsivo para o header
+- Implementar menu responsivo para o header do blog
 
-- Implementar modal de termos fictícios do footer
+- Implementar carrosel para artigos do blog
 
 <br>
 
