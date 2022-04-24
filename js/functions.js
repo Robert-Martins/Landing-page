@@ -1,6 +1,37 @@
 $(document).ready(function(){
     $(function(){
 
+        //Função para abertura do menu na visão mobile
+
+        $('#mobile-menu-btn').click(function(){
+            $('.header-mobile-menu').slideToggle()
+        })
+
+        $(window).resize(function(){
+            if($(window).width() > 692){
+                $('.header-mobile-menu').fadeOut()
+            }
+        })
+
+        //Função que realize o scroll
+
+        $('nav a').click(function(){
+            var href = $(this).attr('href')
+            var home = "#home"
+
+            if(href == home){
+                $('html,body').animate({'scrollTop':0})
+                
+            }
+            else{
+                var offSetTop = $(href).offset().top
+                $('html,body').animate({'scrollTop':offSetTop - 80})
+                // - 80 por conta do header fixo
+            }
+
+            return false
+        })
+
         //Funções referentes ao slider de testemunhos de usuários
 
         var currentSliderIndex = 0
@@ -67,6 +98,9 @@ $(document).ready(function(){
 
         initSlider()
 
+        //Inserindo máscara no inputs usando o plugin jQuery Masks
+        $('#telephone').mask('(00) 00000 - 0000')
+
         //Função para exibição de mensagem de campos inválidos no form de contato
         const toasterWarning = (message) =>{
             $('#warning p').remove()
@@ -92,7 +126,6 @@ $(document).ready(function(){
     
         $('form#contact-form').submit(function(e){
             e.preventDefault()
-            console.log("Está chamando")
             var email = $('input[name=email]').val()
             var telephone = $('input[name=telephone]').val()
             if(emailVerify(email) == false){
@@ -121,28 +154,54 @@ $(document).ready(function(){
         displayNotication()
 
         //Funções referentes ao pop-up de divulgação
-        const openModal = () =>{
+        const openPopUp = () =>{
             $('body').addClass("prevent-scroll")
             $('#modal-container').fadeIn("slow")
         }
 
-        const closeModal = () =>{
+        const closePopUp = () =>{
             $('body').removeClass("prevent-scroll")
             $('#modal-container').fadeOut("slow")
         }
 
         $('div#notification-icon').click(function(){
-            openModal()
+            openPopUp()
         })
 
         $('#modal-container').on('click',function(e){
             if(!(($(e.target).closest("#modal").length > 0))){
-                closeModal()
+                closePopUp()
             }
         })
 
         $('#close-modal-btn').click(function(){
-            closeModal()
+            closePopUp()
+        })
+
+        //Funções referentes aos termos de uso e políticas de privacidade
+
+        const openPoliciesModal = () =>{
+            $('body').addClass("prevent-scroll")
+            $('#policies-modal-container').fadeIn("slow")
+        }
+
+        const closePoliciesModal = () =>{
+            $('body').removeClass("prevent-scroll")
+            $('#policies-modal-container').fadeOut("slow")
+        }
+    
+        $('footer #policies').click(function(){
+            openPoliciesModal()
+        })
+
+        $('#policies-modal-container').on('click',function(e){
+            if(!(($(e.target).closest("#policies-modal").length > 0))){
+                closePoliciesModal()
+            }
+        })
+
+        $('#close-policies-modal-btn').click(function(){
+            closePoliciesModal()
         })
 
     })

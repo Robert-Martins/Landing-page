@@ -6,8 +6,12 @@
             Landing Page
         </title>
         <meta charset="utf-8" />
-        <link href="styles/styles.css" type="text/css" rel="stylesheet" />
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Landing Page desenvolvida para prática e estudo">
+        <meta name="keywords" content="html, css, js">
+        <link href="styles/styles.css" type="text/css" rel="stylesheet" />
+        <link rel="import" href="components/policies-modal/index.html" />
+        <link rel="shortcut icon" type="image-x/png" href="assets/fox.ico" />
     </head>
     <body>
         <header class="header">
@@ -16,11 +20,20 @@
                     <p>LOREM IPSUM</p>
                 </div><!--header-logo-->
                 <nav class="header-menu">
-                    <a class="h4 selected" href="">Home</a>
-                    <a class="h4" href="">A Empresa</a>
-                    <a class="h4" href="">Blog</a>
-                    <a class="h4" href="">Produtos e Serviços</a>
+                    <a class="h4" href="#home">Home</a>
+                    <a class="h4" href="#services">Produtos e Serviços</a>
+                    <a class="h4" href="#testimonials">Depoimentos</a>
+                    <a class="h4" href="#contact">Contato</a>
+                    <a class="h4 nav-btn" href="screens/blog/index.html">Blog</a>
                 </nav><!--header-menu-->
+                <div class="header-menu-btn" id="mobile-menu-btn"></div><!--header-menu-btn-->
+                <nav class="header-mobile-menu">
+                    <a class="h4" href="#home">Home</a>
+                    <a class="h4" href="#services">Produtos e Serviços</a>
+                    <a class="h4" href="#testimonials">Depoimentos</a>
+                    <a class="h4" href="#contact">Contato</a>
+                    <a class="h4" href="screens/blog/index.html">Blog</a>
+                </nav><!--header-mobile-menu-->
             </div><!--header-content-->
         </header><!--header-->
         <main>
@@ -33,7 +46,7 @@
                 </p>
             </div><!--slogan-container-->
         </main>
-        <section class="container">
+        <section class="container" id="services">
             <div class="content-container">
                 <p class="h1" style="color: #ff6200">
                     Conheça os produtos Lorem Ipsum
@@ -110,7 +123,7 @@
                 <div style="clear: both;" ></div>
             </div><!--box-container-->
         </section><!--container-->
-        <section class="ux">
+        <section id="testimonials" class="ux">
             <div class="content-container">
                 <p class="h1" style="color: #ff6200">
                     O que estão dizendo
@@ -198,7 +211,7 @@
                 </div><!--bullet-nav-->
             </div><!--slider-->
         </section><!--ux-->
-        <section class="action-area">
+        <section class="action-area" id="contact">
             <div class="callout">
                 <p class="h2">
                     Deseja receber novidades Lorem Ipsum?
@@ -214,7 +227,7 @@
                 <form id="contact-form">
                     <input name="name" type="text" placeholder="Nome*" required />
                     <input name="email" type="text" placeholder="E-mail*" required />
-                    <input name="telephone" type="text" placeholder="Telefone*" required />
+                    <input name="telephone" type="text" placeholder="Telefone*" required id="telephone" />
                     <input name="submit" type="submit" value="Enviar" required />
                 </form>
             </div><!--form-container-->
@@ -248,7 +261,7 @@
                     <p class="h3">
                         Transparência
                     </p>
-                    <button>
+                    <button id="policies">
                         <p class="h4">
                             Políticas e Termos de Uso
                         </p>
@@ -264,12 +277,15 @@
                 </p>
             </div>
         </footer><!--footer-->
+
         <div id="warning" class="warning"></div><!--warning-->
+
         <div class="user-notify" id="user-notify">
             <div id="notification-icon" class="notification-icon">
                 <img src='assets/notification-bell.png' />
             </div><!--notification-icon-->
         </div><!--user-notify-->
+
         <div class="modal-container" id="modal-container">
             <div class="modal" id="modal">
                 <div class="modal-callout">
@@ -295,7 +311,40 @@
                 <button class="close-modal-btn" id="close-modal-btn"></button>
             </div><!--modal-->
         </div><!--modal-container-->
+
+        <div class="modal-container" id="policies-modal-container">
+            <div class="policies-modal" id="policies-modal">
+                <header>
+                    <p>
+                        Políticas e Termos de Uso Lorem Ipsum
+                    </p>
+                </header>
+                <div class="policies-modal-body">
+                    <p class="h4">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sodales dapibus volutpat. Fusce scelerisque sagittis tellus, sit amet elementum arcu suscipit a. Ut dui odio, vehicula sed aliquam ac, fringilla eget purus. Aenean viverra lectus at pellentesque finibus. In a malesuada dolor. Donec nec ante ut neque feugiat finibus. Nullam efficitur tellus a maximus ullamcorper. Donec mattis consectetur sagittis. Donec at dolor sapien. Vivamus orci diam, viverra gravida consequat sit amet, blandit in justo. Duis mollis suscipit enim, id venenatis turpis faucibus vel. Etiam suscipit varius quam, in dapibus ipsum aliquet a. Integer rhoncus volutpat dolor in vestibulum. Fusce hendrerit bibendum molestie. Maecenas sed lectus ac lacus imperdiet malesuada id nec quam. Duis euismod nisi in nulla ultricies pretium sit amet vitae massa.
+                    </p>
+                    <p class="h4">
+                        Sed tellus purus, dapibus in ligula eget, dapibus gravida nisl. Donec faucibus nulla sit amet enim accumsan, vel imperdiet nibh ultricies. Suspendisse quis porta ante, quis tincidunt diam. Donec et vulputate ligula, eu porttitor velit. Nam pulvinar eget urna et accumsan. Phasellus eu nisl magna. Maecenas arcu odio, bibendum at lectus nec, lacinia volutpat nunc. Donec justo tellus, ultrices quis elit ac, blandit aliquet nunc. Duis tempor tempor interdum. Etiam vel mi elit. In hac habitasse platea dictumst. Phasellus faucibus urna at dolor fermentum, dapibus semper tortor viverra. Pellentesque eu felis porttitor, posuere turpis ac, fermentum arcu. In at imperdiet ligula.
+                    </p>
+                    <p class="h4">
+                        Nullam tristique risus urna, in pellentesque augue scelerisque vitae. In tincidunt nibh enim, ac malesuada leo feugiat sed. Etiam varius, odio ut aliquet gravida, nulla dolor blandit ante, at blandit ante orci ut augue.Phasellus imperdiet vulputate tellus, sed tristique felis tempor eget. Vivamus lacus justo, convallis vitae justo ac, aliquet lacinia augue. Donec iaculis enim sit amet nisi tristique ultricies. Nunc sit amet volutpat risus, quis tempor sem. In porttitor dignissim libero eget varius. Sed non ultricies ex.  
+                    </p> 
+                    <p class="h4">
+                        Fusce posuere eros sit amet maximus mattis. Ut venenatis quis mi eget semper. Aliquam pulvinar dui ullamcorper, dapibus turpis at, facilisis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Duis sed scelerisque diam. Morbi nec lacus pretium, dignissim nisi sed, efficitur augue. Mauris nec ante rutrum, tincidunt quam vitae, consectetur libero. Nunc hendrerit dictum sem. Curabitur lobortis ultrices dui, eu commodo sapien fermentum id. Sed sed convallis urna. Proin porta lobortis purus, et varius mauris venenatis et. Maecenas feugiat mattis ultricies. Vestibulum odio magna, suscipit quis vulputate quis, pretium nec ipsum. Mauris auctor finibus faucibus.
+                    </p>
+                    <p class="h4">
+                        Sed dictum congue risus ac venenatis. Proin interdum risus urna, euismod pellentesque lorem luctus nec. Vestibulum diam orci, posuere et tempus eget, malesuada et purus. Quisque iaculis lacinia urna, ut commodo arcu convallis ac. Donec convallis dui vitae mollis venenatis. Integer cursus nibh vitae egestas vulputate. Nam tempor dapibus lacus sed vehicula. Nullam rutrum feugiat nibh sed gravida. Pellentesque porttitor accumsan massa, a tincidunt ligula volutpat a.
+                    </p>
+                </div><!--policies-modal-body-->
+                <div class="close-btn-wrapper">
+                    <button id="close-policies-modal-btn">
+                        Fechar
+                    </button>
+                </div>
+            </div><!--policies-modal-->
+        </div><!--policies-modal-->
         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
         <script src="js/functions.js"></script>
+        <script src="js/jquery.mask.js"></script>
     </body>
 </html>
