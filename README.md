@@ -1,6 +1,6 @@
 ## Landing Page
 
-<img src="https://img.shields.io/badge/Status-Development-green" /> <img src="https://img.shields.io/badge/Version-2.0.0-green" />
+<img src="https://img.shields.io/badge/Status-Done-green" /> <img src="https://img.shields.io/badge/Version-2.1.0-green" />
 
 <br>
 
@@ -56,22 +56,6 @@ O desenvolvimento do projeto tem como objetivo estudar e desenvolver o domínio 
 
 </details>
 
-- Aba 'Blog' : A aba lista blogs do site, acessível pelo menu superior
-
-<details><summary>GIF de exibição</summary>
-
-  ![blog-tab-exhibition](https://user-images.githubusercontent.com/78915072/165001789-6f9549f7-4b77-4ea9-8b3b-03520c39ec0f.gif)
-
-</details>
-
-- Slider de posts do blog : Slider com animação de scroll horizontal, opções navegáveis atráves de setas ou bullets
-
-<details><summary>GIF de exibição</summary>
-
-  ![blog-slider-exhibition](https://user-images.githubusercontent.com/78915072/165001797-65c5b0d2-5fe2-4f01-8af7-23e001b64956.gif)
-
-</details>
-
 - Scroll automático pelo menu superior : Ao selecionar algumas opções no menu superior o scroll é animado até a seção específica do site
 
 <details><summary>GIF de exibição</summary>
@@ -104,13 +88,7 @@ Claro, toda participação é bem vinda.
 
 ### Seguimento do projeto
 
-Próximos passos:
-
-- Implementar disparo de e-mail ao preencher o formulário
-
-- Implementar menu responsivo para o header do blog
-
-- Implementar carrosel para artigos do blog
+O projeto já atingiu o objetivo de práticas de tecnologias HTML, CSS e JavaScript com o framework JQuery.
 
 <br>
 
